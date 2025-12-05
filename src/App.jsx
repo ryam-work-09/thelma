@@ -102,7 +102,7 @@ export default function App() {
         <h1 className="contact">MOBILE</h1>
 
         <h1 className="contact booking" onClick={goToBooking}>
-          BOOKING
+          <u>BOOKING</u>
         </h1>
 
         <h1 className="credit">Dear Thelma 2025©</h1>

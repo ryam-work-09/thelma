@@ -49,13 +49,15 @@
   font-family: "OT Jubilee";
   font-weight: 400;
   font-size: 24px;
-  color: #FFEE92;
   text-align: center;
   margin-top: 20px;
   cursor: pointer;
 }
 
-/* Darker SEE MORE */
+.title-text2 {
+  color: #FFEE92;
+}
+
 .title-text4 {
   color: #47302D;
 }
@@ -275,5 +277,31 @@ textarea {
 
   .form-wrapper {
     padding: 10px;
+  }
+}
+
+/* ===========================================================
+   MOBILE/TABLET ELLIPSES (ENQUIRE NOW / GET IN TOUCH / SEE MORE)
+=========================================================== */
+
+@media (max-width: 1024px) {
+  .title-text2,
+  .title-text4 {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 2px solid currentColor;
+    border-radius: 50px;  /* ellipse */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .title-text2,
+  .title-text4 {
+    padding: 10px 26px;
+    font-size: 18px;
+    border-width: 2px;
   }
 }
