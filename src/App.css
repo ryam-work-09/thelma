@@ -1,38 +1,39 @@
-/* Main container */
+/* ===========================================================
+   MAIN WRAPPER
+=========================================================== */
 .background-container {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
-/* Blurred background image layer */
+/* Background blur */
 .blurred-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
   filter: blur(8px);
-  transform: scale(1.1); /* Prevents visible edges after blur */
+  transform: scale(1.1);
 }
 
-/* Foreground content */
+/* Main content centered */
 .content {
   position: relative;
   z-index: 1;
-  height: 100%;
   width: 100%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;   /* Stacks the two <h1> elements */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Space between titles */
+  padding: 20px;
 }
 
-/* First title */
+/* ===========================================================
+   TYPOGRAPHY
+=========================================================== */
 .title-text1 {
   font-family: "OT Jubilee", serif;
   font-weight: 400;
@@ -40,336 +41,239 @@
   line-height: 100%;
   text-align: center;
   color: #FFEE92;
-  max-width: 80%;
+  max-width: 90%;
 }
 
-/* Second title */
-.title-text2 {
-  font-family: "OT Jubilee";
-  font-weight: 400;
-  font-size: 24px;
-  color: #FFEE92;
-  text-align: center;
-  margin-top: 40px;
-  position: relative;
-  top: 0;       /* FIXED */
-  left: 0;      /* FIXED */
-  cursor: pointer;
-}
-
-.title-text3 {
-  font-family: "OT Jubilee";
-  font-weight: 400;
-  font-size: 24px;
-  font-style: normal; /* fixed */
-  line-height: 100%;
-  text-align: end;
-  letter-spacing: 0%;
-  color: #FFEE92;
-  width: 178px; 
-  height: 58px; 
-  opacity: 1;
-  position: relative;
-  top: 200px;
-  left: 18px;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 50px;
-
-}
+.title-text2,
 .title-text4 {
   font-family: "OT Jubilee";
   font-weight: 400;
   font-size: 24px;
-  color: #47302D;
+  color: #FFEE92;
   text-align: center;
-  margin-top: 40px;
-  position: relative;
-  top: 0;       /* FIXED */
-  left: 0;      /* FIXED */
+  margin-top: 20px;
   cursor: pointer;
 }
 
+/* Darker SEE MORE */
+.title-text4 {
+  color: #47302D;
+}
+
+.title-text3,
 .title-text5 {
   font-family: "OT Jubilee";
   font-weight: 400;
   font-size: 24px;
-  font-style: normal; /* fixed */
-  line-height: 100%;
-  text-align: end;
-  letter-spacing: 0%;
-  color: #47302D;
-  width: 178px; 
-  height: 58px; 
-  opacity: 1;
-  position: relative;
-  top: 200px;
-  left: 18px;
-  align-items: center;
+  color: #FFEE92;
   text-align: center;
-  padding-bottom: 50px;
-
-}
-.vector-1 {
-  text-align: start;
-  width: 173.72767639160156px;
-  height: 82px;
-  opacity: 1;
-  top: 142px;
-  left: 665px;
+  padding: 20px 0;
 }
 
-.vector-2 {
-  padding-top: 50px;
-  text-align: start;
-  width: 65.5673828125;
-  height: 86.49250030517578;
-  opacity: 1;
-  top: 142px;
-  left: 723px;
+/* Resize vectors */
+.vector-1 img,
+.vector-2 img,
+.vector-3 img {
+  max-width: 100%;
+  height: auto;
 }
 
-
+/* ===========================================================
+   SECTIONS
+=========================================================== */
 .page-container {
-  height: 100vh; /* ensures page can scroll */
+  width: 100%;
   overflow-x: hidden;
 }
 
-/* All sections full screen */
 .section {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-}
-
-.section-2 {
-  background-color: #E7612A;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  padding-top: 100px;
 }
 
-.section-3 {
-  height: 100vh;
-  background-color: #F7EBDD;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-}
+.section-2 { background-color: #E7612A; }
+.section-3 { background-color: #F7EBDD; }
+.section-4 { background-color: #FFEE92; }
+.section-5 { background-color: #47302D; }
+.section-6,
+.section-7 { background-color: #F2D9E8; }
 
-.section-4 {
-  background-color: #FFEE92;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-}
-
-.section-5 {
-  background-color: #47302D;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-}
-
-.section-6 {
-  background-color: #F2D9E8;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-}
-
-.section-7 {
-  background-color: #F2D9E8;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-}
-
+/* ===========================================================
+   NEXT TITLE
+=========================================================== */
 .next-title {
-  padding-top: 100px;
   color: #FFEE92;
-  font-size: 32px;
   font-family: "OT Jubilee";
-  width: 818px;
-  height: 314px;
-  opacity: 1;
-  top: 2000px;
-  left: 347px;
-  font-family: OT Jubilee;
   font-weight: 400;
-  font-style: normal;
   font-size: 32px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-align: center;
-  align-items: center;
+  max-width: 90%;
+  margin-top: 60px;
 }
 
-  /* added px */
-
-  .image-row {
-  width: 936px;
-  height: 252px;
-  padding-top: 100px;
+/* ===========================================================
+   GALLERY ROW
+=========================================================== */
+.image-row {
+  width: 100%;
+  max-width: 900px;
+  padding-top: 40px;
   display: flex;
-  justify-content: space-between;  /* equal spacing */
-  align-items: center;
-  margin-top: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* Each image */
 .gallery-img {
-  width: 201px;
-  height: 252px;
-  object-fit: cover;
+  width: 45%;
+  max-width: 200px;
+  height: auto;
   border-radius: 6px;
+  object-fit: cover;
 }
 
+/* ===========================================================
+   CONTACT & FOOTER
+=========================================================== */
 .contact {
   font-family: "OT Jubilee";
   font-weight: 400;
-  font-size: 32px;
-  font-style: normal; /* fixed */
-  line-height: 100%;
+  font-size: 28px;
   text-align: center;
-  align-items: center;
-  letter-spacing: 0%;
   color: #47302D;
-  width: 178px; 
-  height: 58px; 
-  opacity: 1;
-  position: relative;
-  top: 150px;
-  left: 18px;
-
+  margin: 12px 0;
+  cursor: pointer;
 }
 
 .credit {
   font-family: "PP Neue Montreal";
-  font-weight: 400;
-  font-size: 20px;
-  padding-top: 300px;
+  font-size: 18px;
   text-align: center;
-  align-items: end;
-  width: 177px;
-  height: 18px;
+  padding-top: 60px;
   color: #47302D;
-  object-fit: cover;
-  border-radius: 6px;
 }
 
-.error-contact{
-  font-family: OT Jubilee;
-  font-weight: 400;
-  color:#FFEE92;
-  font-size: 64px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-align: center;
-
-}
-.error-contact2
-{
-  font-family: OT Jubilee;
-  font-weight: 400;
-  color:#FFEE92;
-  font-size: 55px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-align: center;
-
-}
-
+/* ===========================================================
+   FORM PAGE
+=========================================================== */
 .app-container {
-background: #F2D9E8;
-min-height: 100vh;
-padding: 40px;
-display: flex;
-justify-content: center;
-align-items: flex-start;
+  background: #F2D9E8;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
 }
-
 
 .form-wrapper {
-  background-color: #F2D9E8;
   background: #F2D9E8;
   width: 100%;
-  max-width: 600px;        /* optional width */
-  margin: 0 auto;          /* horizontal center */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center for children */
-  height: 100%;            /* allow vertical centering */
+  max-width: 600px;
   padding: 20px;
 }
 
-
 .title {
-font-family: "OT Jubilee";
-font-size: 28px;
-margin-bottom: 40px;
-color: #3a2a2e;
+  font-family: "OT Jubilee";
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3a2a2e;
 }
-
 
 .form-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-
 
 .field {
-font-family: "PP Neue Montreal";
-display: flex;
-flex-direction: column;
-text-align: left;
-font-size: 12px;
-color: #47302D;
+  font-family: "PP Neue Montreal";
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #47302D;
 }
-
 
 .field.full {
-grid-column: span 2;
+  grid-column: span 2;
 }
-
 
 .field input,
 .field select,
 .field textarea {
-margin-top: 6px;
-padding: 10px;
-border: 1px solid #000;
-border-radius: 8px;
-background: #f8edf3;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #f8edf3;
 }
-
 
 textarea {
-height: 120px;
-resize: none;
+  height: 120px;
+  resize: none;
 }
 
-
 .submit-btn {
-margin-top: 40px;
-padding: 12px 30px;
-background: none;
-border: 1px solid #000;
-border-radius: 8px;
-font-size: 14px;
-cursor: pointer;
+  margin-top: 40px;
+  padding: 12px 30px;
+  border: 1px solid #000;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===========================================================
+   RESPONSIVE — MOBILE & TABLET
+=========================================================== */
+@media (max-width: 768px) {
+
+  .title-text1 {
+    font-size: 40px;
+  }
+
+  .next-title {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .gallery-img {
+    width: 45%;
+    max-width: 160px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .field.full {
+    grid-column: span 1 !important;
+  }
+
+  .contact {
+    font-size: 22px;
+  }
+
+  .credit {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title-text1 {
+    font-size: 32px;
+  }
+
+  .gallery-img {
+    width: 80%;
+  }
+
+  .form-wrapper {
+    padding: 10px;
+  }
 }
